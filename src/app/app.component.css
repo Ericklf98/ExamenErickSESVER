@@ -1,0 +1,29 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+.contenedor__flecha {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  height: 10%;
+  left: 80%;
+  margin: -45px 2px;
+}
+.avatar {
+  height: 60px;
+  width: 60px;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  border-radius: 50%;
+  background-size: 100% auto;
+}
+.centrar__titulo {
+  margin-left: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+  font-size: 30px;
+}

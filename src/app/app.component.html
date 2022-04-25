@@ -1,0 +1,39 @@
+<div style="background-color: #000000; width: 100%; height: 64px;" *ngIf="ComprobarRuta()">
+  <div class="example-sidenav-content">
+    <div fxLayout="row wrap" fxLayoutGap="50% grid" fxLayoutAlign="space-between center">
+      <div fxFlex="50%" fxFlex.xs="100%" fxFlex.sm="100%" style="display:flex; flex-direction:row;">
+        <button type="button" style="background-color: #000000" mat-button (click)="drawer.toggle()">
+          <i class="material-icons" style="color: white; font-size: 30px; ">menu</i>
+        </button>
+        <h3 style="color: #ffffff;" class="centrar__titulo">Api de Productos</h3>
+      </div>
+      <div fxFlex="50%" fxFlex.xs="100%" fxFlex.sm="100%">
+        <div class="contenedor__flecha">
+          <div>
+            <div style="color: aliceblue; ">Usuario: {{"Erick Gerardo"}}</div>
+            <div style="color: aliceblue; "> {{"Autenticado"}}</div>
+          </div>
+            <img src="assets/imagenes/office.jpg" class="avatar">>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="over">
+
+    <app-sidebar (click)="onSidenavClose()"></app-sidebar>
+
+  </mat-drawer>
+  <div [ngSwitch]="validar">
+    <div *ngSwitchCase="'No'">
+      <app-login></app-login>
+    </div>
+    <div *ngSwitchCase="'Si'">
+      <div class="container">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</mat-drawer-container>

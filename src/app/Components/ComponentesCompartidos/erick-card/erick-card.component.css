@@ -1,0 +1,58 @@
+.contenedortarjetas{
+  width: 330px;
+  height: 200px;
+  background-color: #fcfcfc;
+  border: 0.5px solid #bdbdbd;
+  display: grid;
+  grid-template-columns: 160px 160px;
+  grid-gap: 10px;
+  border-radius: 10px;
+  margin: 10px;
+}
+.contenedor__tarjeta__img{
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 205px;
+}
+.product__img{
+  border-radius: 9px 15px 15px 9px;
+  width: 100%;
+  height: 98%;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #F5F5F5;
+}
+.user__txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contenedortarjetas:hover{
+  cursor: pointer;
+}
+
+@media(max-width: 768px){
+  .modal__dialog__Historial{
+      background: #ddd;
+      width: 98%;
+      height:50%;
+      border-radius: 15px;
+  }
+  .modal__btn__cancelar__pagos{
+      width: 35px;
+      height: 35px;
+      border-radius: 8px;
+      background-color: red;
+      outline: none;
+      color: white;
+      transform:translate(260%, 0%);
+  }
+  .modal-open  {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+}

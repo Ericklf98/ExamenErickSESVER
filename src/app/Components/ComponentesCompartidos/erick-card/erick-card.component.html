@@ -1,0 +1,15 @@
+
+<div class="contenedortarjetas" (click)="onMostrar()">
+  <div class="contenedor__tarjeta__img">
+    <img src={{imagen}} alt="Imagen no encontrado" class="product__img"/>
+  </div>
+  <div class="user__txt">
+    <p class="">{{nombre}}</p>
+    <p class="">{{brand}}</p>
+    <p class="">$ {{precio}} USD</p>
+    <p class="">{{rating}}</p>
+  </div>
+  <app-modal-erick [open]="open" [nombre]="nombre" [precio]="precio" [brand]="brand"
+  [rating]="rating" [imagen]="imagen" [category]="category" [description]="description" [product_type]="product_type" [colors]="colors"></app-modal-erick>
+</div>
+

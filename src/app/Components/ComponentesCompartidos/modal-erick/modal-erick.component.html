@@ -1,0 +1,39 @@
+<div [ngClass]="open ? 'modal modal-open' : 'modal' ">
+  <div class="modal__dialog__Historial">
+    <div class="modal__titulo2 w-full">
+      {{nombre}}
+      <div class="flex justify-end ">
+        <button (click)="cambiarEstado()" class="modal__btn__cancelar__pagos">
+          X
+        </button>
+      </div>
+    </div>
+    <div class="flex justify-center w-full">
+      <div class="modal.structure">
+        <div class="contenedor__principal">
+          <div class="contenedor__tarjeta__img">
+            <img src={{imagen}} alt="Imagen de producto no encontrado" class="product__img" />
+          </div>
+          <div class="contenedorpalabras">
+            <p>Nombre: {{nombre}}</p>
+            <p>Marca: {{brand}}</p>
+            <p>Precio: ${{precio}} USD</p>
+          </div>
+        </div>
+        <div class="">
+          <p>{{rating}}</p>
+          <p class="bajar pdescrip">Descripción: {{description}}</p>
+          <p>Tipo Producto: {{product_type}}</p>
+          <p *ngif="category!==null">Categoría: {{category}}</p>
+          <p >Colores: {{category}}</p>
+          <div style="display: flex; flex-direction: row; flex-wrap: wrap;" class="bajar pdescrip2">
+            <div *ngFor="let colores of arreglocolores" style="display: flex; flex-direction: row; margin:5px;">
+              <app-colores [hexadecimal]="colores.hex_value"></app-colores>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="p-3  mt-2 text-center space-x-4 md:block"></div>
+  </div>
+</div>

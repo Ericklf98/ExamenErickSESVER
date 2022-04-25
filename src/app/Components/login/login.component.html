@@ -1,0 +1,30 @@
+<form [formGroup]="form" (ngSubmit)="ComprobarSession()">
+  <div class="loginpage">
+    <div class="contenedorlogin">
+      <div class="fondo">
+      </div>
+      <img src="assets/imagenes/girl_login.svg" alt="" class="imglogin" />
+    </div>
+    <div class="login">
+      <div class="login-data">
+        <div class="panelerror" *ngIf="error">Usuario o Contraseña Incorrecta</div>
+        <h1>Inicio de Sesión</h1>
+        <div action="#" class="login-form">
+          <div class="input-group">
+            <label class="input-fill">
+              <input type="email" form="form" formControlName="nombre" name="nombre" id="email" required />
+              <span class="input-label">Correo Electrónico</span>
+            </label>
+          </div>
+          <div class="input-group">
+            <label class="input-fill">
+              <input type="password" name="password" form="form" formControlName="password" id="password" required />
+              <span class="input-label">Contraseña</span>
+            </label>
+          </div>
+          <input type="submit" value="Iniciar Sesión" class="btn-login" />
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
