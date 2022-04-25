@@ -61,10 +61,10 @@ import { ColoresComponent } from './Components/ComponentesCompartidos/colores/co
 
       // { path: 'login', component: LoginComponent },
       { path: 'items', component: PrincipalComponent },
-      { path: 'category', component: CategoryComponent },
-      { path: 'brand', component: BrandComponent},
-      { path: 'product-type', component: ProductTypeComponent },
-      { path: 'any-brand', component: UniversalComponent },
+      { path: 'categoria', component: CategoryComponent },
+      { path: 'marca', component: BrandComponent},
+      { path: 'tipo', component: ProductTypeComponent },
+      { path: 'home', component: UniversalComponent },
       { path: 'app-interfaz/:id', component: PrincipalComponent },
 
       { path: '**', redirectTo: 'any-brand' }
