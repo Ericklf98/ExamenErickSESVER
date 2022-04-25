@@ -1,7 +1,7 @@
 <div class="containeruniversal">
   <p>&nbsp;</p>
   <div *ngIf="loader===true" class="centrar__loading">Cargando Productos Tipo....</div>
-  <div class="universal__titulo "  *ngIf="loader===false">Resultado de los productos</div>
+  <div class="universal__titulo "  *ngIf="loader===false">Resultados de los productos tipo Mascara</div>
   <div class="alinear__btn"  *ngIf="loader===false">
     <button [ngClass]=" ValidadorAnterior() ? 'esconder__btn ': ''" (click)="PreviousPage()" [disabled]="ValidadorAnterior()" class="design__btn"><div class="alinear__flechas"><mat-icon>skip_previous</mat-icon> Anterior</div></button>
     <button (click)="nextPage()" class="design__btn"><div class="alinear__flechas">Siguiente<mat-icon>skip_next</mat-icon></div></button>
