@@ -27,11 +27,9 @@ export class LoginComponent implements OnInit {
     this.User.nombre = this.form.get('nombre')?.value;
     this.User.UserPassword = this.form.get('password')?.value;
     if (this.User.nombre  === "erick.gerar" && this.User.UserPassword=== "123456"){
-      console.log("simon cacheton");
       sessionStorage.setItem('UserName', (this.User.nombre ));
       sessionStorage.setItem('password', (this.User.UserPassword));
       localStorage.setItem("validador","Si");
-      console.log(localStorage.getItem("validador"))
     }else{
       this.error=true;
       console.log(this.User.nombre ,this.User.UserPassword)

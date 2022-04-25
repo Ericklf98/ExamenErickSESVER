@@ -67,7 +67,7 @@ import { ColoresComponent } from './Components/ComponentesCompartidos/colores/co
       { path: 'home', component: UniversalComponent },
       { path: 'app-interfaz/:id', component: PrincipalComponent },
 
-      { path: '**', redirectTo: 'any-brand' }
+      { path: '**', redirectTo: 'home' }
     ])
   ],
   providers: [],
