@@ -10,6 +10,7 @@ import { Product } from '../../Servicios/Product.service';
 })
 export class UniversalComponent implements OnInit {
   public pagina:number=0;//se ocupara para la paginacion
+  public search:string="";
   constructor(private product: Product) {}
   arregloprocustos: ProductModel[] = [];//inicilizaremos el producto para evitar errores
   loader=true;
@@ -39,5 +40,10 @@ export class UniversalComponent implements OnInit {
     if(this.pagina>0){
       this.pagina-=9;
     }
+  }
+  Buscador(word:string){
+    console.log("la word",word)
+    this.pagina=0;
+    this.search=word;
   }
 }
