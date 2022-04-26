@@ -72,3 +72,11 @@ export class ProductModel{
     this.category_ = value;
   }
 }
+/**
+ * export interface FetchAllPokemonResponse {
+    count:    number;
+    next:     null;
+    previous: null;
+    results:  SmallPokemon[];
+}
+ */
